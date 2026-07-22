@@ -1,0 +1,116 @@
+@import 'tailwindcss';
+
+/* ── Minimalism theme — near-monochrome engineering UI ── */
+
+:root {
+  color-scheme: dark;
+  --q-bg: #08080a;
+  --q-panel: #0c0c0e;
+  --q-border: rgba(255, 255, 255, 0.08);
+  --q-text: #e8e8ea;
+  --q-muted: #73737a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  background: var(--q-bg);
+  color: var(--q-text);
+}
+
+body {
+  font-family:
+    'Inter',
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    'Segoe UI',
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+}
+
+/* Scrollbars — restrained */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.16);
+}
+
+/* Range slider — minimal monochrome */
+.q-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 2px;
+  border-radius: 1px;
+  background: rgba(255, 255, 255, 0.12);
+  outline: none;
+  cursor: pointer;
+}
+
+.q-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #d4d4d8;
+  border: 1px solid #09090b;
+  cursor: pointer;
+  transition: transform 0.12s ease;
+}
+
+.q-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.1);
+}
+
+.q-slider::-moz-range-thumb {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #d4d4d8;
+  border: 1px solid #09090b;
+  cursor: pointer;
+}
+
+.q-slider::-moz-range-track {
+  height: 2px;
+  background: rgba(255, 255, 255, 0.12);
+  border: none;
+}
+
+/* Selection */
+::selection {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+}
+
+/* R3F canvas fill */
+canvas {
+  display: block;
+  outline: none;
+}
+
+/* Leva panel overrides if used later — keep dark */
+.leva-c-kWgxhW {
+  font-family: inherit !important;
+}
